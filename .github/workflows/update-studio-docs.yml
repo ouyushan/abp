@@ -1,642 +1,289 @@
-name: Update ABP Studio Docs
+Skip to content
+abpframework
+abp
+Repository navigation
+Code
+Issues
+356
+ (356)
+Pull requests
+22
+ (22)
+Agents
+Discussions
+Actions
+Projects
+Security
+361
+ (361)
+Insights
+Settings
+Update ABP Studio Docs
+update_studio_docs #13
+All jobs
+Run details
+Annotations
+2 errors
+update-docs
+succeeded 7 minutes ago in 1m 2s
+Search logs
+1s
+0s
+1s
+47s
+1s
+0s
+0s
+Run FILE="docs/en/studio/release-notes.md"
+1s
+Run actions/ai-inference@v1
+  with:
+    model: openai/gpt-4.1
+    prompt: You are a technical writer for ABP Studio release notes.
+  
+  Existing release notes format:
+  ```json
+  //[doc-seo]
+  {
+      "Description": "Explore the latest features and enhancements in ABP Studio with release notes detailing major updates and improvements for developers."
+  }
+  ```
+  
+  # ABP Studio Release Notes
+  
+  This document contains **brief release notes** for each ABP Studio release. Release notes only include **major features** and **visible enhancements**. Therefore, they don't include all the development done in the related version. 
+  
+  ## 2.1.4 (2025-12-30) Latest
+  
+  * Fixed books sample for blazor-webapp tiered solution.
+  * Fixed K8s cluster deployment issues for microservices.
+  * Fixed docker build problem on microservice template.
+  * Showed logs of the executed tasks.
+  
+  ## 2.1.3 (2025-12-15)
+  
+  * Updated `createCommand` and CLI help for multi-tenancy.
+  * Fixed `BookController` templating problem.
+  
+  ## 2.1.2 (2025-12-11)
+  
+  * Fixed `SLNX` files in templates for macOS.
+  * Fixed `DbMigrator` problem on nolayers template.
+  
+  ## 2.1.1 (2025-12-11)
+  
+  * Fixed duplicate workspace seeding issue.
+  * Fixed books sample problems when solution is tiered.
+  * Added AI Management module to `abpmdl` file.
+  * Improved skip running initial tasks text.
+  * Fixed unit test failures.
+  * Added `LanguageManagementDbContext` table creation in tests.
+  * Removed `ConfigureHttpClientProxies` method.
+  * Fixed issue with adding new services to existing Microservices.
+  * Fixed AI Management template issues.
+  * Reverted browser notification overlay fix.
+  
+  ## 2.1.0 (2025-12-08)
+  
+  * Enhanced Module Installation UI with improved user experience.
+  * Added `AI Management` option to Startup Templates (app-nolayers, app).
+  * Added support for new `SLNX` solution file format.
+  * Enhanced modularity step in solution creation process.
+  * Fixed Swagger authorization issues when projects run via .NET Aspire.
+  * Fixed browser notification overlay problems.
+  * Added missing `Unit of Work` namespace in solution templates.
+  
+  New release:
+  Version: 2.1.5
+  Name: 2.1.5
+  Raw notes:
+  ## What's Changed
+  * Cli: Added version command by @yekalkan in https://github.com/volosoft/abp-studio/pull/4216
+  * Disable AbpStudio link in production environments by @maliming in https://github.com/volosoft/abp-studio/pull/4245
+  * Refactor `Install into main application` process by @yekalkan in https://github.com/volosoft/abp-studio/pull/4199
+  * Redesign "purchase license" button in license information window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4251
+  * Remove remembering the old solution name logic from connection string window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4253
+  * Community License: Show disabled items visually by @yekalkan in https://github.com/volosoft/abp-studio/pull/4268
+  * Solution Runner: Don't try to re-run the app if there is a build error by @yekalkan in https://github.com/volosoft/abp-studio/pull/4254
+  * Angular - Fixing the missing authentication guard for the ddd template by @sumeyyeKurtulus in https://github.com/volosoft/abp-studio/pull/4262
+  * Update abp and LeptonX version to 10.0.2 and 5.0.2. by @maliming in https://github.com/volosoft/abp-studio/pull/4255
+  * Fix unknown application while collecting data from client by @berkansasmaz in https://github.com/volosoft/abp-studio/pull/4213
+  * Fixed microservice solution build errors for Blazor Server and Angular by @berkansasmaz in https://github.com/volosoft/abp-studio/pull/4287
+  * Allow minimizing some windows without minimizing the main window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4283
+  * Change "Clear Cookies" functionality with "Clear site data" by @yekalkan in https://github.com/volosoft/abp-studio/pull/4293
+  * Update version to release 2.1.5 with 10.0.2 by @skoc10 in https://github.com/volosoft/abp-studio/pull/4301
+  
+  
+  **Full Changelog**: https://github.com/volosoft/abp-studio/compare/2.1.4...2.1.5
+  
+  
+  CRITICAL RULES:
+  1. Extract ONLY essential, user-facing changes
+  2. Format as bullet points starting with "- "
+  3. Keep it concise and professional
+  4. Match the style of existing release notes
+  5. Skip internal/technical details unless critical
+  6. Return ONLY the bullet points (no version header, no date)
+  7. One change per line
+  
+  Output example:
+  - Fixed books sample for blazor-webapp tiered solution
+  - Enhanced Module Installation UI
+  - Added AI Management option to Startup Templates
+  
+  Return ONLY the formatted bullet points.
+  
+    endpoint: https://models.github.ai/inference
+    system-prompt: You are a helpful assistant
+    max-tokens: 200
+    token: ***
+    enable-github-mcp: false
+  env:
+    RAW_NOTES: ## What's Changed
+  * Cli: Added version command by @yekalkan in https://github.com/volosoft/abp-studio/pull/4216
+  * Disable AbpStudio link in production environments by @maliming in https://github.com/volosoft/abp-studio/pull/4245
+  * Refactor `Install into main application` process by @yekalkan in https://github.com/volosoft/abp-studio/pull/4199
+  * Redesign "purchase license" button in license information window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4251
+  * Remove remembering the old solution name logic from connection string window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4253
+  * Community License: Show disabled items visually by @yekalkan in https://github.com/volosoft/abp-studio/pull/4268
+  * Solution Runner: Don't try to re-run the app if there is a build error by @yekalkan in https://github.com/volosoft/abp-studio/pull/4254
+  * Angular - Fixing the missing authentication guard for the ddd template by @sumeyyeKurtulus in https://github.com/volosoft/abp-studio/pull/4262
+  * Update abp and LeptonX version to 10.0.2 and 5.0.2. by @maliming in https://github.com/volosoft/abp-studio/pull/4255
+  * Fix unknown application while collecting data from client by @berkansasmaz in https://github.com/volosoft/abp-studio/pull/4213
+  * Fixed microservice solution build errors for Blazor Server and Angular by @berkansasmaz in https://github.com/volosoft/abp-studio/pull/4287
+  * Allow minimizing some windows without minimizing the main window by @yekalkan in https://github.com/volosoft/abp-studio/pull/4283
+  * Change "Clear Cookies" functionality with "Clear site data" by @yekalkan in https://github.com/volosoft/abp-studio/pull/4293
+  * Update version to release 2.1.5 with 10.0.2 by @skoc10 in https://github.com/volosoft/abp-studio/pull/4301
+  
+  
+  **Full Changelog**: https://github.com/volosoft/abp-studio/compare/2.1.4...2.1.5
+  
+    BRANCH: docs/studio-2.1.5
+Using legacy prompt format
+Running simple inference without tools
+Error: API error: Error: 403 status code (no body)
+Error: 403 status code (no body)
+0s
+Run mkdir -p .tmp
+⚠️ AI unavailable - using raw release notes with cleaning
+=== Final release notes ===
+- ## What's Changed
+-  Cli: Added version command by yekalkan
+-  Disable AbpStudio link in production environments by maliming
+-  Refactor `Install into main application` process by yekalkan
+-  Redesign "purchase license" button in license information window by yekalkan
+-  Remove remembering the old solution name logic from connection string window by yekalkan
+-  Community License: Show disabled items visually by yekalkan
+-  Solution Runner: Don't try to re-run the app if there is a build error by yekalkan
+-  Angular - Fixing the missing authentication guard for the ddd template by sumeyyeKurtulus
+-  Update abp and LeptonX version to 10.0.2 and 5.0.2. by maliming
+-  Fix unknown application while collecting data from client by berkansasmaz
+-  Fixed microservice solution build errors for Blazor Server and Angular by berkansasmaz
+-  Allow minimizing some windows without minimizing the main window by yekalkan
+-  Change "Clear Cookies" functionality with "Clear site data" by yekalkan
+-  Update version to release 2.1.5 with 10.0.2 by skoc10
+===========================
+0s
+Run FILE="docs/en/studio/release-notes.md"
+=== Updated release-notes.md preview ===
+```json
+//[doc-seo]
+{
+    "Description": "Explore the latest features and enhancements in ABP Studio with release notes detailing major updates and improvements for developers."
+}
+```
 
-on:
-  repository_dispatch:
-    types: [update_studio_docs]
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Studio version (e.g., 2.1.10)'
-        required: true
-      name:
-        description: 'Release name'
-        required: true
-      notes:
-        description: 'Raw release notes'
-        required: true
-      url:
-        description: 'Release URL'
-        required: true
-      target_branch:
-        description: 'Target branch (default: dev)'
-        required: false
-        default: 'dev'
+# ABP Studio Release Notes
 
-jobs:
-  update-docs:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      models: read
+This document contains **brief release notes** for each ABP Studio release. Release notes only include **major features** and **visible enhancements**. Therefore, they don't include all the development done in the related version. 
 
-    steps:
-      # -------------------------------------------------
-      # Extract payload (repository_dispatch or workflow_dispatch)
-      # -------------------------------------------------
-      - name: Extract payload
-        id: payload
-        run: |
-          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-            echo "version=${{ github.event.client_payload.version }}" >> $GITHUB_OUTPUT
-            echo "name=${{ github.event.client_payload.name }}" >> $GITHUB_OUTPUT
-            echo "url=${{ github.event.client_payload.url }}" >> $GITHUB_OUTPUT
-            echo "target_branch=${{ github.event.client_payload.target_branch || 'dev' }}" >> $GITHUB_OUTPUT
-            
-            # Save notes to environment variable (multiline)
-            {
-              echo "RAW_NOTES<<NOTES_DELIMITER_EOF"
-              jq -r '.client_payload.notes' "$GITHUB_EVENT_PATH"
-              echo "NOTES_DELIMITER_EOF"
-            } >> $GITHUB_ENV
-          else
-            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
-            echo "name=${{ github.event.inputs.name }}" >> $GITHUB_OUTPUT
-            echo "url=${{ github.event.inputs.url }}" >> $GITHUB_OUTPUT
-            echo "target_branch=${{ github.event.inputs.target_branch || 'dev' }}" >> $GITHUB_OUTPUT
-            
-            # Save notes to environment variable (multiline)
-            {
-              echo "RAW_NOTES<<NOTES_DELIMITER_EOF"
-              echo "${{ github.event.inputs.notes }}"
-              echo "NOTES_DELIMITER_EOF"
-            } >> $GITHUB_ENV
-          fi
+## 2.1.5 (2026-02-06) Latest
 
-      - name: Validate payload
-        env:
-          VERSION: ${{ steps.payload.outputs.version }}
-          NAME: ${{ steps.payload.outputs.name }}
-          URL: ${{ steps.payload.outputs.url }}
-          TARGET_BRANCH: ${{ steps.payload.outputs.target_branch }}
-        run: |
-          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
-            echo "❌ Missing: version"
-            exit 1
-          fi
-          if [ -z "$NAME" ] || [ "$NAME" = "null" ]; then
-            echo "❌ Missing: name"
-            exit 1
-          fi
-          if [ -z "$URL" ] || [ "$URL" = "null" ]; then
-            echo "❌ Missing: url"
-            exit 1
-          fi
-          if [ -z "$RAW_NOTES" ]; then
-            echo "❌ Missing: release notes"
-            exit 1
-          fi
-          
-          echo "✅ Payload validated"
-          echo "  Version: $VERSION"
-          echo "  Name: $NAME"
-          echo "  Target Branch: $TARGET_BRANCH"
+- ## What's Changed
+-  Cli: Added version command by yekalkan
+-  Disable AbpStudio link in production environments by maliming
+-  Refactor `Install into main application` process by yekalkan
+-  Redesign "purchase license" button in license information window by yekalkan
+-  Remove remembering the old solution name logic from connection string window by yekalkan
+-  Community License: Show disabled items visually by yekalkan
+-  Solution Runner: Don't try to re-run the app if there is a build error by yekalkan
+-  Angular - Fixing the missing authentication guard for the ddd template by sumeyyeKurtulus
+-  Update abp and LeptonX version to 10.0.2 and 5.0.2. by maliming
+-  Fix unknown application while collecting data from client by berkansasmaz
+-  Fixed microservice solution build errors for Blazor Server and Angular by berkansasmaz
+-  Allow minimizing some windows without minimizing the main window by yekalkan
+-  Change "Clear Cookies" functionality with "Clear site data" by yekalkan
+-  Update version to release 2.1.5 with 10.0.2 by skoc10
 
-      # -------------------------------------------------
-      # Checkout target branch
-      # -------------------------------------------------
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ steps.payload.outputs.target_branch }}
-          fetch-depth: 0
+## 2.1.4 (2025-12-30)
+========================================
+0s
+Run # Fetch all releases
+✅ Latest stable ABP version: 10.0.3
+1s
+Run FILE="docs/en/studio/version-mapping.md"
+✅ Added new mapping: 2.1.5 -> 10.0.3
+MAPPING_UPDATED=true
+=== Updated version-mapping.md preview ===
+```json
+//[doc-seo]
+{
+    "Description": "Explore the version mappings between ABP Studio and ABP Solution Templates to streamline your development process and ensure compatibility."
+}
+```
 
-      - name: Configure git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+# ABP Studio and ABP Startup Template Version Mappings
 
-      # -------------------------------------------------
-      # Create working branch
-      # -------------------------------------------------
-      - name: Create branch
-        env:
-          VERSION: ${{ steps.payload.outputs.version }}
-        run: |
-          BRANCH="docs/studio-${VERSION}"
-          
-          # Delete remote branch if exists (idempotent)
-          git push origin --delete "$BRANCH" 2>/dev/null || true
-          
-          git checkout -B "$BRANCH"
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+This document provides a general overview of the relationship between various versions of ABP Studio and the ABP version of the [ABP Solution Templates](../solution-templates/index.md) used when generating a new solution. Each version of ABP Studio is configured to create solutions with a specific ABP version. However, once a solution is created, you can easily update it to the latest version of ABP via ABP Studio or [ABP CLI](../cli/index.md#update).
 
-      # -------------------------------------------------
-      # Analyze existing release notes format
-      # -------------------------------------------------
-      - name: Analyze existing format
-        id: analyze
-        run: |
-          FILE="docs/en/studio/release-notes.md"
-          
-          if [ -f "$FILE" ] && [ -s "$FILE" ]; then
-            {
-              echo "EXISTING_FORMAT<<DELIMITER_EOF"
-              head -50 "$FILE" | sed 's/DELIMITER_EOF/DELIMITER_E0F/g'
-              echo "DELIMITER_EOF"
-            } >> $GITHUB_OUTPUT
-          else
-            {
-              echo "EXISTING_FORMAT<<DELIMITER_EOF"
-              echo "# ABP Studio Release Notes"
-              echo ""
-              echo "## 2.1.0 (2025-12-08) Latest"
-              echo "- Enhanced Module Installation UI"
-              echo "- Added AI Management option"
-              echo "DELIMITER_EOF"
-            } >> $GITHUB_OUTPUT
-          fi
-
-      # -------------------------------------------------
-      # Try AI formatting (OPTIONAL - never fails workflow)
-      # -------------------------------------------------
-      - name: Format release notes with AI
-        id: ai
-        continue-on-error: true
-        uses: actions/ai-inference@v1
-        with:
-          model: openai/gpt-4.1
-          prompt: |
-            You are a technical writer for ABP Studio release notes.
-            
-            Existing release notes format:
-            ${{ steps.analyze.outputs.EXISTING_FORMAT }}
-            
-            New release:
-            Version: ${{ steps.payload.outputs.version }}
-            Name: ${{ steps.payload.outputs.name }}
-            Raw notes:
-            ${{ env.RAW_NOTES }}
-            
-            CRITICAL RULES:
-            1. Extract ONLY essential, user-facing changes
-            2. Format as bullet points starting with "- "
-            3. Keep it concise and professional
-            4. Match the style of existing release notes
-            5. Skip internal/technical details unless critical
-            6. Return ONLY the bullet points (no version header, no date)
-            7. One change per line
-            
-            Output example:
-            - Fixed books sample for blazor-webapp tiered solution
-            - Enhanced Module Installation UI
-            - Added AI Management option to Startup Templates
-            
-            Return ONLY the formatted bullet points.
-
-      # -------------------------------------------------
-      # Fallback: Use raw notes if AI unavailable
-      # -------------------------------------------------
-      - name: Prepare final release notes
-        run: |
-          mkdir -p .tmp
-          
-          AI_RESPONSE="${{ steps.ai.outputs.response }}"
-          
-          if [ -n "$AI_RESPONSE" ] && [ "$AI_RESPONSE" != "null" ]; then
-            echo "✅ Using AI-formatted release notes"
-            echo "$AI_RESPONSE" > .tmp/final-notes.txt
-          else
-            echo "⚠️ AI unavailable - using raw release notes with cleaning"
-            
-            # Clean and format raw notes
-            echo "$RAW_NOTES" | while IFS= read -r line; do
-              # Skip empty lines
-              [ -z "$line" ] && continue
-              
-              # Skip GitHub PR metadata lines
-              [[ "$line" =~ ^(Full\ Changelog|\*\*Full\ Changelog) ]] && continue
-              
-              # Clean GitHub username mentions (@username -> username)
-              line=$(echo "$line" | sed 's/@\([a-zA-Z0-9_-]*\)/\1/g')
-              
-              # Clean GitHub PR/issue links - extract just the description
-              line=$(echo "$line" | sed 's#in https://github.com/[^[:space:]]*##g')
-              line=$(echo "$line" | sed 's#by [a-zA-Z0-9_-]* in##g')
-              
-              # Clean extra "by username" mentions
-              line=$(echo "$line" | sed 's/by [a-zA-Z0-9_-]*$//g')
-              
-              # Trim whitespace
-              line=$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-              
-              # Skip if line is now empty
-              [ -z "$line" ] && continue
-              
-              # Add bullet if not present
-              if [[ ! "$line" =~ ^[[:space:]]*[-*] ]]; then
-                echo "- $line"
-              else
-                # Normalize to dash
-                echo "$line" | sed 's/^[[:space:]]*\*/- /'
-              fi
-            done > .tmp/final-notes.txt
-          fi
-          
-          echo "=== Final release notes ==="
-          cat .tmp/final-notes.txt
-          echo "==========================="
-
-      # -------------------------------------------------
-      # Update release-notes.md (move "Latest" tag correctly)
-      # -------------------------------------------------
-      - name: Update release-notes.md
-        env:
-          VERSION: ${{ steps.payload.outputs.version }}
-          NAME: ${{ steps.payload.outputs.name }}
-          URL: ${{ steps.payload.outputs.url }}
-        run: |
-          FILE="docs/en/studio/release-notes.md"
-          DATE="$(date +%Y-%m-%d)"
-          
-          mkdir -p docs/en/studio
-          
-          # Check if version already exists (idempotent)
-          if [ -f "$FILE" ] && grep -q "^## $VERSION " "$FILE"; then
-            echo "⚠️ Version $VERSION already exists in release notes - skipping update"
-            echo "VERSION_UPDATED=false" >> $GITHUB_ENV
-            exit 0
-          fi
-          
-          # Read final notes
-          NOTES_CONTENT="$(cat .tmp/final-notes.txt)"
-          
-          # Create new entry
-          NEW_ENTRY="## $VERSION ($DATE) Latest
-
-          $NOTES_CONTENT
-          "
-          
-          # Process file
-          if [ ! -f "$FILE" ]; then
-            # Create new file
-            cat > "$FILE" <<EOF
-          # ABP Studio Release Notes
-
-          $NEW_ENTRY
-          EOF
-          else
-            # Remove "Latest" tag from existing entries and insert new one
-            awk -v new_entry="$NEW_ENTRY" '
-            BEGIN { inserted = 0 }
-            
-            # Remove "Latest" from existing entries
-            /^## [0-9]/ {
-              gsub(/ Latest$/, "", $0)
-            }
-            
-            # Insert after first "## " (version heading) or after title
-            /^## / && !inserted {
-              print new_entry
-              inserted = 1
-            }
-            
-            # Print current line
-            { print }
-            
-            # If we reach end without inserting, add at end
-            END {
-              if (!inserted) {
-                print ""
-                print new_entry
-              }
-            }
-            ' "$FILE" > "$FILE.new"
-            
-            mv "$FILE.new" "$FILE"
-          fi
-          
-          echo "VERSION_UPDATED=true" >> $GITHUB_ENV
-          
-          echo "=== Updated release-notes.md preview ==="
-          head -30 "$FILE"
-          echo "========================================"
-
-      # -------------------------------------------------
-      # Fetch latest stable ABP version (no preview/rc/beta)
-      # -------------------------------------------------
-      - name: Fetch latest stable ABP version
-        id: abp
-        run: |
-          # Fetch all releases
-          RELEASES=$(curl -fsS \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/abpframework/abp/releases?per_page=20")
-          
-          # Filter stable releases (exclude preview, rc, beta, dev)
-          ABP_VERSION=$(echo "$RELEASES" | jq -r '
-            [.[] | select(
-              (.prerelease == false) and
-              (.tag_name | test("preview|rc|beta|dev"; "i") | not)
-            )] | first | .tag_name
-          ')
-          
-          if [ -z "$ABP_VERSION" ] || [ "$ABP_VERSION" = "null" ]; then
-            echo "❌ Could not determine latest stable ABP version"
-            exit 1
-          fi
-          
-          echo "✅ Latest stable ABP version: $ABP_VERSION"
-          echo "ABP_VERSION=$ABP_VERSION" >> $GITHUB_ENV
-
-      # -------------------------------------------------
-      # Update version-mapping.md (smart range expansion)
-      # -------------------------------------------------
-      - name: Update version-mapping.md
-        env:
-          STUDIO_VERSION: ${{ steps.payload.outputs.version }}
-        run: |
-          FILE="docs/en/studio/version-mapping.md"
-          ABP_VERSION="${{ env.ABP_VERSION }}"
-          
-          mkdir -p docs/en/studio
-          
-          # Create file if doesn't exist
-          if [ ! -f "$FILE" ]; then
-            cat > "$FILE" <<EOF
-          # ABP Studio and ABP Startup Template Version Mappings
-
-          | **ABP Studio Version** | **ABP Version of Startup Template** |
-          |------------------------|-------------------------------------|
-          | $STUDIO_VERSION        | $ABP_VERSION                        |
-          EOF
-            echo "MAPPING_UPDATED=true" >> $GITHUB_ENV
-            exit 0
-          fi
-          
-          # Use Python for smart version range handling
-          python3 <<'PYTHON_EOF'
-          import os
-          import re
-          from packaging.version import Version, InvalidVersion
-
-          studio_ver = os.environ["STUDIO_VERSION"]
-          abp_ver = os.environ["ABP_VERSION"]
-          file_path = "docs/en/studio/version-mapping.md"
-
-          try:
-              studio = Version(studio_ver)
-          except InvalidVersion:
-              print(f"❌ Invalid Studio version: {studio_ver}")
-              exit(1)
-
-          with open(file_path, 'r') as f:
-              lines = f.readlines()
-
-          # Find table start (skip SEO and headers)
-          table_start = 0
-          table_end = 0
-          for i, line in enumerate(lines):
-              if line.strip().startswith('|') and '**ABP Studio Version**' in line:
-                  table_start = i
-              elif table_start > 0 and line.strip() and not line.strip().startswith('|'):
-                  table_end = i
-                  break
-
-          if table_start == 0:
-              print("❌ Could not find version mapping table")
-              exit(1)
-
-          # If no end found, table goes to end of file
-          if table_end == 0:
-              table_end = len(lines)
-
-          # Extract sections
-          before_table = lines[:table_start]  # Everything before table
-          table_header = lines[table_start:table_start+2]  # Header + separator
-          data_rows = [l for l in lines[table_start+2:table_end] if l.strip().startswith('|')]  # Data rows
-          after_table = lines[table_end:]  # Everything after table
-
-          new_rows = []
-          handled = False
-
-          def parse_version_range(version_str):
-              """Parse '2.1.5 - 2.1.9' or '2.1.5' into (start, end)"""
-              version_str = version_str.strip()
-              
-              if '–' in version_str or '-' in version_str:
-                  # Handle both em-dash and hyphen
-                  parts = re.split(r'\s*[–-]\s*', version_str)
-                  if len(parts) == 2:
-                      try:
-                          return Version(parts[0].strip()), Version(parts[1].strip())
-                      except InvalidVersion:
-                          return None, None
-              
-              try:
-                  v = Version(version_str)
-                  return v, v
-              except InvalidVersion:
-                  return None, None
-
-          def format_row(studio_range, abp_version):
-              """Format a table row with proper spacing"""
-              return f"| {studio_range:<22} | {abp_version:<27} |\n"
-
-          # Process existing rows
-          for row in data_rows:
-              match = re.match(r'\|\s*(.+?)\s*\|\s*(.+?)\s*\|', row)
-              if not match:
-                  continue
-              
-              existing_studio_range = match.group(1).strip()
-              existing_abp = match.group(2).strip()
-              
-              # Only consider rows with matching ABP version
-              if existing_abp != abp_ver:
-                  new_rows.append(row)
-                  continue
-              
-              start_ver, end_ver = parse_version_range(existing_studio_range)
-              
-              if start_ver is None or end_ver is None:
-                  new_rows.append(row)
-                  continue
-              
-              # Check if current studio version is in this range
-              if start_ver <= studio <= end_ver:
-                  print(f"✅ Studio version {studio_ver} already covered in range {existing_studio_range}")
-                  handled = True
-                  new_rows.append(row)
-              
-              # Check if we should extend the range
-              elif end_ver < studio:
-                  # Calculate if studio is the next logical version
-                  # For patch versions: 2.1.9 -> 2.1.10
-                  # For minor versions: 2.1.9 -> 2.2.0
-                  
-                  # Simple heuristic: if major.minor match and patch increments, extend range
-                  if (start_ver.major == studio.major and 
-                      start_ver.minor == studio.minor and
-                      studio.micro <= end_ver.micro + 5):  # Allow small gaps
-                      
-                      new_range = f"{start_ver} - {studio}"
-                      new_rows.append(format_row(new_range, abp_ver))
-                      print(f"✅ Extended range: {new_range}")
-                      handled = True
-                  else:
-                      new_rows.append(row)
-              else:
-                  new_rows.append(row)
-
-          # If not handled, add new row at top of data
-          if not handled:
-              new_row = format_row(str(studio), abp_ver)
-              new_rows.insert(0, new_row)
-              print(f"✅ Added new mapping: {studio_ver} -> {abp_ver}")
-
-          # Write updated file - preserve ALL content
-          with open(file_path, 'w') as f:
-              f.writelines(before_table)  # SEO, title, intro text
-              f.writelines(table_header)  # Table header
-              f.writelines(new_rows)      # Updated data rows
-              f.writelines(after_table)   # Content after table (preview section, etc.)
-
-          print("MAPPING_UPDATED=true")
-          PYTHON_EOF
-          
-          echo "MAPPING_UPDATED=true" >> $GITHUB_ENV
-          
-          echo "=== Updated version-mapping.md preview ==="
-          head -35 "$FILE"
-          echo "=========================================="
-
-      # -------------------------------------------------
-      # Check for changes
-      # -------------------------------------------------
-      - name: Check for changes
-        id: changes
-        run: |
-          git add docs/en/studio/
-          
-          if git diff --cached --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "⚠️ No changes detected"
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "✅ Changes detected:"
-            git diff --cached --stat
-          fi
-
-      # -------------------------------------------------
-      # Commit & push
-      # -------------------------------------------------
-      - name: Commit and push
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          VERSION: ${{ steps.payload.outputs.version }}
-          NAME: ${{ steps.payload.outputs.name }}
-        run: |
-          git commit -m "docs(studio): update documentation for release $VERSION
-
-          - Updated release notes for $VERSION
-          - Updated version mapping with ABP ${{ env.ABP_VERSION }}
-          
-          Release: $NAME"
-          
-          git push -f origin "$BRANCH"
-
-      # -------------------------------------------------
-      # Create or update PR
-      # -------------------------------------------------
-      - name: Create or update PR
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION: ${{ steps.payload.outputs.version }}
-          NAME: ${{ steps.payload.outputs.name }}
-          URL: ${{ steps.payload.outputs.url }}
-          TARGET_BRANCH: ${{ steps.payload.outputs.target_branch }}
-        run: |
-          # Check for existing PR
-          EXISTING_PR=$(gh pr list \
-            --head "$BRANCH" \
-            --base "$TARGET_BRANCH" \
-            --json number \
-            --jq '.[0].number' 2>/dev/null || echo "")
-          
-          PR_BODY="Automated documentation update for ABP Studio release **$VERSION**.
-
-          ## Release Information
-          - **Version**: $VERSION
-          - **Name**: $NAME
-          - **Release**: [View on GitHub]($URL)
-          - **ABP Framework Version**: ${{ env.ABP_VERSION }}
-
-          ## Changes
-          - ✅ Updated [release-notes.md](docs/en/studio/release-notes.md)
-          - ✅ Updated [version-mapping.md](docs/en/studio/version-mapping.md)
-
-          ---
-          
-          *This PR was automatically generated by the [update-studio-docs workflow](.github/workflows/update-studio-docs.yml)*"
-          
-          if [ -n "$EXISTING_PR" ]; then
-            echo "🔄 Updating existing PR #$EXISTING_PR"
-            
-            gh pr edit "$EXISTING_PR" \
-              --title "docs(studio): release $VERSION - $NAME" \
-              --body "$PR_BODY"
-            
-            echo "PR_NUMBER=$EXISTING_PR" >> $GITHUB_ENV
-          else
-            echo "📝 Creating new PR"
-            
-            sleep 2  # Wait for GitHub to sync
-            
-            PR_URL=$(gh pr create \
-              --title "docs(studio): release $VERSION - $NAME" \
-              --body "$PR_BODY" \
-              --base "$TARGET_BRANCH" \
-              --head "$BRANCH")
-            
-            PR_NUMBER=$(echo "$PR_URL" | grep -oE '[0-9]+$')
-            echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
-            echo "✅ Created PR #$PR_NUMBER: $PR_URL"
-          fi
-
-      # -------------------------------------------------
-      # Enable auto-merge (safe with branch protection)
-      # -------------------------------------------------
-      - name: Enable auto-merge
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
-        run: |
-          echo "🔄 Attempting to enable auto-merge for PR #$PR_NUMBER"
-          
-          gh pr merge "$PR_NUMBER" \
-            --auto \
-            --squash \
-            --delete-branch || {
-              echo "⚠️ Auto-merge not available (branch protection or permissions)"
-              echo "   PR #$PR_NUMBER is ready for manual review"
-            }
-
-      # -------------------------------------------------
-      # Summary
-      # -------------------------------------------------
-      - name: Workflow summary
-        if: always()
-        env:
-          VERSION: ${{ steps.payload.outputs.version }}
-        run: |
-          echo "## 📚 ABP Studio Docs Update Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Version**: $VERSION" >> $GITHUB_STEP_SUMMARY
-          echo "**Release**: ${{ steps.payload.outputs.name }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Target Branch**: ${{ steps.payload.outputs.target_branch }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          if [ "${{ steps.changes.outputs.has_changes }}" = "true" ]; then
-            echo "### ✅ Changes Applied" >> $GITHUB_STEP_SUMMARY
-            echo "- Release notes updated: ${{ env.VERSION_UPDATED }}" >> $GITHUB_STEP_SUMMARY
-            echo "- Version mapping updated: ${{ env.MAPPING_UPDATED }}" >> $GITHUB_STEP_SUMMARY
-            echo "- ABP Framework version: ${{ env.ABP_VERSION }}" >> $GITHUB_STEP_SUMMARY
-            echo "- PR: #${{ env.PR_NUMBER }}" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "### ⚠️ No Changes" >> $GITHUB_STEP_SUMMARY
-            echo "Version $VERSION already exists in documentation." >> $GITHUB_STEP_SUMMARY
-          fi
+| **ABP Studio Version** | **ABP Version of Startup Template**           |
+|------------------------|---------------------------|
+| 2.1.5                  | 10.0.3                      |
+| 2.1.5 - 2.1.9          | 10.0.2                    |
+| 2.1.0 - 2.1.4          | 10.0.1                    |
+| 2.0.0 to 2.0.2         | 10.0.0                    |
+| 1.4.2                  | 9.3.6                     |
+| 1.3.3 to 1.4.1         | 9.3.5                     |
+| 1.3.0 - 1.3.2          | 9.3.4                     |
+| 1.2.2                  | 9.3.2                     |
+| 1.2.1                  | 9.3.1                     |
+| 1.1.2                  | 9.2.3                     |
+| 1.1.0 - 1.1.1          | 9.2.2                     |
+| 1.0.2                  | 9.2.1                     |
+| 1.0.0 - 1.0.1          | 9.2.0                     |
+| 0.9.26                 | 9.1.1                     |
+| 0.9.24 - 0.9.25        | 9.1.0                     |
+| 0.9.22 - 0.9.23        | 9.0.4                     |
+| 0.9.20 - 0.9.21        | 9.0.3                     |
+| 0.9.17 to 0.9.19       | 9.0.2                     |
+| 0.9.15 - 0.9.16        | 9.0.1                     |
+| 0.9.9 to 0.9.14        | 9.0.0                     |
+| 0.9.8                  | 8.3.4                     |
+| 0.9.5 to 0.9.7         | 8.3.3                     |
+==========================================
+0s
+Run git add docs/en/studio/
+✅ Changes detected:
+ docs/en/studio/release-notes.md   | 22 ++++++++++++++++++++--
+ docs/en/studio/version-mapping.md |  2 +-
+ 2 files changed, 21 insertions(+), 3 deletions(-)
+0s
+Run git commit -m "docs(studio): update documentation for release $VERSION
+[docs/studio-2.1.5 1ac46effb9] docs(studio): update documentation for release 2.1.5
+ 2 files changed, 21 insertions(+), 3 deletions(-)
+remote: 
+remote: Create a pull request for 'docs/studio-2.1.5' on GitHub by visiting:        
+remote:      https://github.com/abpframework/abp/pull/new/docs/studio-2.1.5        
+remote: 
+To https://github.com/abpframework/abp
+ * [new branch]            docs/studio-2.1.5 -> docs/studio-2.1.5
+7s
+Run # Check for existing PR
+📝 Creating new PR
+✅ Created PR #24833: https://github.com/abpframework/abp/pull/24833
+1s
+Run echo "🔄 Attempting to enable auto-merge for PR #$PR_NUMBER"
+🔄 Attempting to enable auto-merge for PR #24833
+0s
+1s
+0s
